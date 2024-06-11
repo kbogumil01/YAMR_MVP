@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,52 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.quiz {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.question, .image-selection, .rating, .result {
+  margin: 20px;
+  width: 100%;
+}
+
+button {
+  margin: 5px;
+}
+
+.images img {
+  width: 100px;
+  height: 100px;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  position: absolute;
+  width: 100%;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+  position: absolute;
+  width: 100%;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
 }
