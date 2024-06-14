@@ -71,3 +71,16 @@
 .MuiButton-containedPrimary:hover {
   background-color: #0056b3; /* Kolor tła po najechaniu myszką */
 }
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures any overflow is hidden */
+}
+
+.video-element {
+  width: 640px; /* Fixed width */
+  height: 360px; /* Fixed height */
+  object-fit: cover; /* Ensures the video covers the container */
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
+import imdb from '../pics/imdb.png';
+
 
 function Recommendation({ movie, onFeedback }) {
   return (
@@ -11,15 +11,14 @@ function Recommendation({ movie, onFeedback }) {
         <img src={movie.src} alt={movie.title} style={{width: '25%', height: '25%',  marginBottom: '2px'}} />
       </div>
       <div>
-        <p style={{ margin: '0' }}>UP! (2009)</p>
-        <p style={{ margin: '0' }}>Director: Pete Docter</p>
-        <div style={{ display: 'flex',justifyContent: 'center', alignItems: 'center'}}>
-          <StarIcon />
-          <StarIcon />
-          <StarIcon />
-          <StarIcon />
-          <StarHalfIcon />
+        <p style={{ margin: '0' }}>Title: {movie.title} ({movie.year})</p>
+        <p style={{ margin: '0' }}>Director: {movie.director}</p>
+        <p style={{ margin: '0' }}>Studio: {movie.studio}</p>
+        <div style={{ display: 'flex', justifyContent:'center', alignItems: 'center', marginTop: '2px'}}>
+          <img src={imdb} alt="IMDb icon" style={{ width: '50px', height: '27px', marginRight: '12px' }} />
+          <p style={{ margin: '0' }}>{movie.imdbRating}/10</p>
         </div>
+
       </div>
       <h3>Rate this recommendation!</h3>
       <div>

@@ -1,0 +1,51 @@
+.multi-choice-question {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .multi-choice-question h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .option-label {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .option-checkbox {
+    transform: scale(2);
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #666666;
+  }
+  
